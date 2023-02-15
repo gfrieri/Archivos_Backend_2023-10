@@ -119,7 +119,7 @@ const estudiante3 = {
 }
 const lista = [estudiante1, estudiante2, estudiante3]
 
-//Punto 3 NO DOYYY AA
+//Punto 3
 function matriculaCondicional(listaEst){
     const condicional = [];
     for (let i = 0; i < lista.length; i++) {
