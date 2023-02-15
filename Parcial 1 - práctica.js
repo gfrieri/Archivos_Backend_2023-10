@@ -125,7 +125,17 @@ function matriculaCondicional(listaEst){
     for (let i = 0; i < lista.length; i++) {
         condicional[i] = listaEst[i].courses;
     }
-    return condicional[0]
+    for (let i = 0; i < condicional.length; i++) {
+        let prom = 0;
+        for (let j = 0; j < condicional[i].length; j++) {
+            prom += condicional[i][j].grade
+        }
+        prom /= condicional[i].length
+        if (prom <= 3.3) {
+            contCondicional ++;
+        }
+    }
+    return [contCondicional]
 }
 console.log(matriculaCondicional(lista));
 
