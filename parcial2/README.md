@@ -10,7 +10,7 @@
 
 ## Puntos
 
-1. Implemente una funcion que reciba los datos de estudiantes y retorne la informacion personal de los estudiantes "estrella" (promedio mayor a 4.5).
+1. Implemente una funcion que reciba los datos de estudiantes y retorne la informacion personal de los estudiantes que pueden "recuperar" (2.5 <promedio < 3).
 
 2. Su compañero de trabajo, Julian, desarrolló el punto dos. Utilizando los conceptos aprendidos en JS Avanzado, mejore la función.
 
