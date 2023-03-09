@@ -4,7 +4,7 @@ function puntoUno(estudiantes) {
   const promedioClase = (prev, cur) => prev.grade + (cur.grade * cur.weight);
   const promedioEst = (prev, cur) => prev.grade + cur.assignments.reduce(promedioClase, 0);
   const puedeRecuperar = (est) => est.courses.reduce(promedioEst, 0)/(est.courses.length)>2.5 & est.courses.reduce(promedioEst, 0)/(est.courses.length)<3.0;
-  const recuperan = (est) => est.personal_info
+  const recuperan = (est) => est.personal_info;
   return estudiantes.filter(puedeRecuperar).map(recuperan);
 }
 
@@ -37,7 +37,7 @@ function puntoDos(products, filters) {
 function puntoTres(estudiantes) {
   let tit = "";
   let genero = "";
-  const selected_students = estudiantes.filter((est) => 2023-est.personal_info.birthdate.split("-")[2] < "20")
+  const selected_students = estudiantes.filter((est) => 2023-est.personal_info.birthdate.split("-")[2] < "20");
   const listaEstudiantes = selected_students.map((est) => {
     if(est.personal_info.genero == "F"){
       tit = "Sra."
@@ -62,6 +62,7 @@ function puntoTres(estudiantes) {
   return listaEstudiantes;
   //Esta versión se borra el if y se cambia la variable tit por tit(est)[0] y la variable genero por tit(est)[1]
   //const tit = i => (i.personal_info.Gender == "F") ? ["Sra.", "F"] : ["Sr.", "M"];
+  //No estoy 100% seguro si funciona tho, quiero probar con otros datos luego
 }
 
 function puntoCuatro(user, items) {
